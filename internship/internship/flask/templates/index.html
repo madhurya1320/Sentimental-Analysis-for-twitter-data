@@ -1,0 +1,50 @@
+<html>
+<head> 
+<title> Sentiment analysis on twitter comments</title>
+<style>
+body
+		{
+			font-size:20px;
+			font-family: latoregular;
+      color : black;
+			margin: 140px;
+			padding:60px;
+			background-image:url("https://i.pinimg.com/564x/35/81/e9/3581e9f7e1a8b4fbcfd85028951047b9.jpg");
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+div 
+{ 
+  border: 5px solid black;
+  #background-color: E0E0E0;
+  background-color: FFFFCC;
+  width: 450px;
+  padding: 30px;
+  font-family: 'latoregular';
+  font-size: 15px;
+  margin-top: 50px;
+  margin-right: 300px;
+  padding-top: 0px;
+}
+p.ridge 
+{
+  border-style: ridge;
+}
+</style>
+</head>
+<body>
+<div>
+<h2> Sentiment analysis on twitter comments </h2>
+<hr>
+<form action = "{{ url_for('y_predict')}}" method = "post">
+    <br>
+    <b> Enter the twitter comment </b> 
+    <input type = "text" name ="Sentence"/> <br>
+    <br>
+    <center><button> Predict </button></center>
+</form>
+<center> <b> </b> </center>
+{{ prediction_text }}
+</div>
+</body>
+</html>
